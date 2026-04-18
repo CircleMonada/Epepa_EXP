@@ -3433,7 +3433,7 @@ function stop_reprod_qltRoutineEnd(snapshot) {
     stop_reprod_key_qlt.stop();
     // Run 'End Routine' code from error_code_qlt
     reproduction_duration = stop_reprod_key_qlt.rt;
-    error_percentage = (((reproduction_duration - ref_duration) / ref_duration) * 100);
+    error_percentage = (((reproduction_duration - ref_duration_qual) / ref_duration_qual) * 100);
     acceptable_error = 15;
     if ((Math.abs(error_percentage) <= acceptable_error)) {
         quality_msg = "\u0432\u0435\u0440\u043d\u043e";
@@ -3931,7 +3931,7 @@ function stop_reprod_qnttRoutineEnd(snapshot) {
     stop_reprod_key_qntt.stop();
     // Run 'End Routine' code from error_code_qntt
     reproduction_duration = stop_reprod_key_qntt.rt;
-    error_percentage = (((reproduction_duration - ref_duration) / ref_duration) * 100);
+    error_percentage = (((reproduction_duration - ref_duration_quant) / ref_duration_quant) * 100);
     acceptable_error = 15;
     if ((Math.abs(error_percentage) <= acceptable_error)) {
         quantity_msg = "\u0432\u0435\u0440\u043d\u043e";
