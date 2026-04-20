@@ -4233,7 +4233,7 @@ function OSFRoutineBegin(snapshot) {
         let row = allKeys.map(key => {
             let val = trial[key];
             // если значение undefined, ставим пустую строку
-            return val !== undefined ? "${val}" : '';
+            return val !== undefined ? `"${val}"` : '';
         }).join(',');
         csv += row + '\n';
     });
